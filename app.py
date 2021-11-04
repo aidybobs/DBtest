@@ -41,7 +41,7 @@ class UpdateEmp(FlaskForm):
 @app.route('/')
 def home():
     emps = Employee.query.all()
-    return render_template('homepage.html', records=emps)
+    return render_template('Homepage.html', records=emps)
 
 @app.route('/editRecord/<int:empno>', methods=['GET', 'POST'])
 def editRecordForm(empno):
